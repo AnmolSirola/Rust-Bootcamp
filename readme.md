@@ -1,1 +1,2 @@
-Rust-Bootcamp Excercises
+Rust-Bootcamp 
+- Completing Excercises and Implementing them
