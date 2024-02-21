@@ -19,3 +19,38 @@ fn query_db(query: String) -> Result<String, String> {
         Ok(String::from("Ferris"))
     }
 }
+
+/*
+// Define a function that returns a Result
+fn divide(a: i32, b: i32) -> Result<i32, &'static str> {
+    if b == 0 {
+        // Return an error if the divisor is zero
+        Err("Cannot divide by zero")
+    } else {
+        // Return the result if the division is successful
+        Ok(a / b)
+    }
+}
+
+fn main() {
+    // Example usage of the divide function
+    match divide(10, 2) {
+        Ok(result) => {
+            println!("Result: {}", result);
+        }
+        Err(err) => {
+            println!("Error: {}", err);
+        }
+    }
+
+    // Example with an error case
+    match divide(8, 2) {
+        Ok(result) => {
+            println!("Result: {}", result);
+        }
+        Err(err) => {
+            println!("Error: {}", err);
+        }
+    }
+}
+ */
