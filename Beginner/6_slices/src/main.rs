@@ -53,7 +53,7 @@ fn main() {
     println!("{:?}", a_slice);
 }
 
-fn trim_tweet(tweet: &str) -> &str {
+fn trim_tweet(tweet: &str /*&String*/) -> &str {
     &tweet[..20]
 }
 
