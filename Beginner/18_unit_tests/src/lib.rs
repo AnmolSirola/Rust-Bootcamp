@@ -1,18 +1,49 @@
-/// A savings account
+
 pub struct SavingsAccount {
     balance: i32,
 }
 
+impl SavingsAccount{
+
+    pub fn new() -> SavingsAccount{
+        SavingsAccount{
+            balance: 0,
+        }
+    }
+
+    pub fn get_balance(&self) -> i32 { self.balance }
+
+    pub fn deposit(&mut self, amount: i32) { self.balance += amount}    
+}
+
+#[cfg(test)]
+mod tests{
+    use super::*;
+
+    #[test]
+    fn should_have_a_starting_balance_of_0(){
+        let account = SavingsAccount::new();  //Creating a savings account 
+        assert_eq!(account.get_balance(), 0); // Then call get balance on you account and seert that the value is 0 
+    }
+
+    fn should_be_able_to_deposit(){
+        let mut account = SavingsAccount::new();
+        account.deposit(100);
+        assert_eq!(account.get_balance(), 100);
+    }
+}
+
+
+
+/* 
+
+pub struct SavingsAccount {
+    balance: i32,
+}
+
+
 impl SavingsAccount {
-    /// Creates a `SavingsAccount` with a balance of 0
-    /// 
-    /// # Examples
-    /// 
-    /// ```
-    /// use bank::SavingsAccount;
-    /// let account = SavingsAccount::new();
-    /// assert_eq!(account.get_balance(), 0);
-    /// ```
+
     pub fn new() -> SavingsAccount {
         SavingsAccount {
             balance: 0,
@@ -32,6 +63,7 @@ impl SavingsAccount {
         Ok(format!("Transferred ${amount} to {acc_number}"))
     }
 }
+
 
 #[cfg(test)]
 mod tests {
@@ -65,3 +97,6 @@ mod tests {
         Ok(())
     }
 }
+
+*/
+
